@@ -36,6 +36,8 @@ export const App = () => {
             </Route>
           </Route>
         </Route>
+        <Route path='/login' element={<Login />} />
+        <Route path='/logout' element={<Logout />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
     </UserProvider>
