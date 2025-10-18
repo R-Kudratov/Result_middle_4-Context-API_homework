@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from 'react-router-dom'
+import { UserStatus } from './UserStatus'
 
 const navLinkStyle = ({ isActive }: { isActive: boolean }) =>
   `hover:bg-[#24475b] px-4 py-1 rounded-3xl duration-200 ease-in-out ${
@@ -21,6 +22,9 @@ export const Layout = () => {
         <NavLink to='/episodes' className={navLinkStyle}>
           Эпизоды
         </NavLink>
+        <div className='hover:bg-[#24475b] px-4 py-1 rounded-3xl duration-200 ease-in-out cursor-pointer'>
+          <UserStatus />
+        </div>
       </nav>
       <main className='w-full mt-15'>
         <Outlet />
